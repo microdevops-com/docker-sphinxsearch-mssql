@@ -4,7 +4,7 @@ ENV SPHINX_VERSION 3.2.1-f152e0b
 
 ENV ACCEPT_EULA=Y
 RUN apt-get update
-RUN apt-get install -y --no-install-recommends locales apt-transport-https curl ca-certificates libmariadb-dev postgresql-server-dev-all unixodbc-dev gnupg
+RUN apt-get install -y --no-install-recommends locales apt-transport-https curl ca-certificates libmariadb-dev postgresql-server-dev-all unixodbc-dev gnupg psmisc
 RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && locale-gen
 RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 RUN curl https://packages.microsoft.com/config/debian/10/prod.list > /etc/apt/sources.list.d/mssql-release.list
