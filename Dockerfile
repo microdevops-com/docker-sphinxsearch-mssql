@@ -29,4 +29,6 @@ EXPOSE 36307
 
 VOLUME /opt/sphinx/conf
 
+RUN ln -s /opt/sphinx/conf/odbc.ini /etc/odbc.ini
+
 CMD searchd --nodetach --config /opt/sphinx/conf/sphinx.conf
