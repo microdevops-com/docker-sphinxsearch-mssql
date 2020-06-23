@@ -4,7 +4,7 @@ sphinxsearch docker image based on bionic with mssql
 ## sphinx.conf example
 ```
 ...
-source front
+source source_name
 {
 	type			= odbc
 
@@ -13,7 +13,7 @@ source front
 	sql_pass		= password
 	sql_db			= db
 	sql_port		= 1433
-	odbc_dsn = DSN=db;Driver={/etc/odbc.ini};Uid=sa;Pwd=password
+	odbc_dsn = DSN=db;Driver={/etc/odbc.ini};Uid=sa;Pwd=password;Database=db
 }
 ...
 ```
